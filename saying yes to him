@@ -1,52 +1,20 @@
-MMMMMMMMMMimport turtle as t
+from manim import *
 
-# Function to draw a circle for teddy bear parts
-def draw_circle(color, radius, x, y):
-    t.penup()
-    t.color(color)
-    t.fillcolor(color)
-    t.goto(x, y)
-    t.pendown()
-    t.begin_fill()
-    t.circle(radius)
-    t.end_fill()
-    t.penup()
+class TeddyBearSayingYes(Scene):
+    def construct(self):
+        # Draw the teddy bear
+        body = Circle(radius=1, color=BROWN).shift(DOWN)
+        head = Circle(radius=0.5, color=BROWN).shift(UP)
+        left_eye = Dot(point=[-0.2, 0.6, 0], color=BLACK)
+        right_eye = Dot(point=[0.2, 0.6, 0], color=BLACK)
+        nose = Dot(point=[0, 0.4, 0], color=BLACK)
+        mouth = ArcBetweenPoints(start=[-0.2, 0.3, 0], end=[0.2, 0.3, 0], angle=-TAU / 8)
+        
+        bear = VGroup(body, head, left_eye, right_eye, nose, mouth)
+        
+        # Add the bear to the scene
+        self.play(FadeIn(bear))
+        self.wait(1)
 
-# Setup turtle
-t.speed(5)
-t.bgcolor("lightblue")
-
-# Draw teddy bear face
-draw_circle("brown", 50, 0, 0)
-
-# Draw teddy bear ears
-draw_circle("brown", 20, -35, 90)
-draw_circle("brown", 20, 35, 90)
-
-# Draw teddy bear eyes
-draw_circle("white", 10, -20, 40)
-draw_circle("white", 10, 20, 40)
-draw_circle("black", 5, -20, 40)
-draw_circle("black", 5, 20, 40)
-
-# Draw teddy bear nose
-draw_circle("black", 8, 0, 20)
-
-# Draw teddy bear mouth
-t.goto(0, 10)
-t.color("black")
-t.pendown()
-t.right(90)
-t.circle(10, 180)
-t.penup()
-
-# Write message
-t.goto(0, -70)
-t.color("red")
-t.write("Yes I will be your life partner", align="center", font=("Arial", 16, "bold"))
-
-# Hide turtle
-t.hideturtle()
-
-# Finish
-t.done()
+        # Make the bear say "Yes"
+        tex
