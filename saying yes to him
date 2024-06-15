@@ -1,19 +1,52 @@
-public class Proposal {
-    public static void main(String[] args) {
-        // Display the teddy bear
-        System.out.println("     ___   ___ ");
-        System.out.println("   ((  \\\\ /  ))");
-        System.out.println("   ((    o    ))");
-        System.out.println("     \\\\_\\ /_//");
-        System.out.println("       /  \\\\");
-        System.out.println("      / /\\ \\\\");
-        System.out.println("     /_/  \\_\\");
-        System.out.println("     /      \\\\");
-        System.out.println("    /        \\\\");
-        System.out.println("   /_/      \\_\\");
-        System.out.println();
-        
-        // Display the proposal message
-        System.out.println("Yes, I would be your life patner!");
-    }
-}
+import turtle as t
+
+# Function to draw a circle for teddy bear parts
+def draw_circle(color, radius, x, y):
+    t.penup()
+    t.color(color)
+    t.fillcolor(color)
+    t.goto(x, y)
+    t.pendown()
+    t.begin_fill()
+    t.circle(radius)
+    t.end_fill()
+    t.penup()
+
+# Setup turtle
+t.speed(5)
+t.bgcolor("lightblue")
+
+# Draw teddy bear face
+draw_circle("brown", 50, 0, 0)
+
+# Draw teddy bear ears
+draw_circle("brown", 20, -35, 90)
+draw_circle("brown", 20, 35, 90)
+
+# Draw teddy bear eyes
+draw_circle("white", 10, -20, 40)
+draw_circle("white", 10, 20, 40)
+draw_circle("black", 5, -20, 40)
+draw_circle("black", 5, 20, 40)
+
+# Draw teddy bear nose
+draw_circle("black", 8, 0, 20)
+
+# Draw teddy bear mouth
+t.goto(0, 10)
+t.color("black")
+t.pendown()
+t.right(90)
+t.circle(10, 180)
+t.penup()
+
+# Write message
+t.goto(0, -70)
+t.color("red")
+t.write("Yes to be my life partner", align="center", font=("Arial", 16, "bold"))
+
+# Hide turtle
+t.hideturtle()
+
+# Finish
+t.done()
