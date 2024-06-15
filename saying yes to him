@@ -1,4 +1,4 @@
-import turtle as t
+MMMMMMMMMMimport turtle as t
 
 # Function to draw a circle for teddy bear parts
 def draw_circle(color, radius, x, y):
@@ -43,7 +43,7 @@ t.penup()
 # Write message
 t.goto(0, -70)
 t.color("red")
-t.write("Yes to be my life partner", align="center", font=("Arial", 16, "bold"))
+t.write("Yes I will be your life partner", align="center", font=("Arial", 16, "bold"))
 
 # Hide turtle
 t.hideturtle()
