@@ -1,0 +1,19 @@
+public class Proposal {
+    public static void main(String[] args) {
+        // Display the teddy bear
+        System.out.println("     ___   ___ ");
+        System.out.println("   ((  \\\\ /  ))");
+        System.out.println("   ((    o    ))");
+        System.out.println("     \\\\_\\ /_//");
+        System.out.println("       /  \\\\");
+        System.out.println("      / /\\ \\\\");
+        System.out.println("     /_/  \\_\\");
+        System.out.println("     /      \\\\");
+        System.out.println("    /        \\\\");
+        System.out.println("   /_/      \\_\\");
+        System.out.println();
+        
+        // Display the proposal message
+        System.out.println("Yes, I would be your life patner!");
+    }
+}
